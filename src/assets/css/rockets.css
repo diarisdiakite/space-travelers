@@ -36,3 +36,17 @@
   align-items: start;
   justify-content: start;
 }
+
+.reserve-button {
+  background-color: var(--skyBlue);
+  color: var(--white-three);
+  border: 0px var(--white-three) solid;
+  height: 40px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.reserve-button:hover {
+  background-color: var(--blue-one);
+}

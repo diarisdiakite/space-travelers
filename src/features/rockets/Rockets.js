@@ -13,7 +13,7 @@ const Rockets = ({
       <div className="rocket-content-container">
         <h2 key={id}>{rocketName}</h2>
         <p>{description}</p>
-        <button type="button">Reserve Rocket</button>
+        <button type="button" className="reserve-button">Reserve Rocket</button>
       </div>
     </div>
   </div>
