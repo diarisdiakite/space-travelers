@@ -21,7 +21,7 @@
 }
 
 .rocket-card {
-  display: flex
+  display: flex;
 }
 
 .rocket-image-container > img {
