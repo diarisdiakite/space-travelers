@@ -5,15 +5,27 @@
     display: flex;
     justify-content: space-between;;
   }
+
+  .logo {
+    width: 30px;
+    height: 30px;
+    align-self: center;
+  }
+
+  img {
+    width: auto;
+    height: auto;
+  }
   
   .title {
     width: 50%;
-    display: inline-block;
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
   }
   
   .nav {
     width: 50%;
-
   }
   
   .nav-container {
@@ -26,24 +38,15 @@
   .nav-item {
     list-style-type: none;
     width: 20%;
-    height: 100%;
-    margin: 3% 0 0 5%;
+    height: 50%;
+    margin: 5% 0 0 5%;
     align-self: center;
     border-right: 1px solid black;
     align-items: baseline;
-  }
-  
-  .nav-link {
     text-decoration: none;
-    width: 100%;
+    color: gray;
   }
-  
+    
   .active {
     color: red;
   }
-
-  img {
-    width: auto;
-    height: auto;
-  }
-  
