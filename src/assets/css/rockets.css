@@ -40,7 +40,7 @@
 .reserve-button {
   background-color: var(--skyBlue);
   color: var(--white-three);
-  border: 0px var(--white-three) solid;
+  border: 0 var(--white-three) solid;
   height: 40px;
   cursor: pointer;
   padding: 5px;
