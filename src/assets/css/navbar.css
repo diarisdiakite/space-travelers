@@ -1,0 +1,49 @@
+.container {
+    width: 90vw;
+    height: 10vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;;
+  }
+  
+  .title {
+    width: 50%;
+    display: inline-block;
+  }
+  
+  .nav {
+    width: 50%;
+
+  }
+  
+  .nav-container {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  
+  .nav-item {
+    list-style-type: none;
+    width: 20%;
+    height: 100%;
+    margin: 3% 0 0 5%;
+    align-self: center;
+    border-right: 1px solid black;
+    align-items: baseline;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    width: 100%;
+  }
+  
+  .active {
+    color: red;
+  }
+
+  img {
+    width: auto;
+    height: auto;
+  }
+  
