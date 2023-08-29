@@ -29,15 +29,22 @@ const missionsSlice = createSlice({
   reducers: {
     setFetchedMissions: (state, action) => {
       state.missions = action.payload;
-      console.log(state.missions);
       state.loading = false;
       state.error = '';
     },
-    reserveMission: () => {
-
+    joinMission: (state, action) => {
+      const missionId = action.payload;
+      state.missions = state.missions.map((mission) => {
+        if (mission.mission_id !== missionId) return mission;
+        return { ...mission, reserved: true };
+      });
     },
-    cancelMissionReservation: () => {
-
+    cancelMissionParticipation: (state, action) => {
+      const missionId = action.payload;
+      state.missions = state.missions.map((mission) => {
+        if (mission.mission_id !== missionId) return mission;
+        return { ...mission, reserved: false };
+      });
     },
   },
   extraReducers: (builder) => {
@@ -69,8 +76,8 @@ export const selectMissionsByUser = createSelector(
 );
 
 export const {
-  setFetchedMissions, reserveMission,
-  cancelMissionReservation,
+  setFetchedMissions, joinMission,
+  cancelMissionParticipation,
 } = missionsSlice.actions;
 
 export default missionsSlice.reducer;

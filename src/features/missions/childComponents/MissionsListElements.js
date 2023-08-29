@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Table from 'react-bootstrap/Table';
-import { reserveMission, cancelMissionReservation } from '../missionsSlice';
+import { joinMission, cancelMissionParticipation } from '../missionsSlice';
 
 function MissionsListElements({ missions }) {
   const dispatch = useDispatch();
@@ -36,20 +36,24 @@ function MissionsListElements({ missions }) {
               {/* Status */}
             </td>
             <td>
+              {!mission.reserved && (
               <button
                 type="button"
-                aria-label="Remove mission"
-                onClick={() => dispatch(reserveMission(mission.id))}
+                aria-label="Join mission"
+                onClick={() => dispatch(joinMission(mission.mission_id))}
               >
-                Reserve participation
+                Join Mission
               </button>
+              )}
+              {mission.reserved && (
               <button
                 type="button"
-                aria-label="Remove mission"
-                onClick={() => dispatch(cancelMissionReservation(mission.id))}
+                aria-label="cancel mission participation"
+                onClick={() => dispatch(cancelMissionParticipation(mission.mission_id))}
               >
-                Cancel Reservation
+                Cancel
               </button>
+              )}
             </td>
           </tr>
         ))}

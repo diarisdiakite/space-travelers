@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 // import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
-import { selectMissionsById, reserveMission, cancelMissionReservation } from './missionsSlice';
+import { selectMissionsById, joinMission, cancelMissionParticipation } from './missionsSlice';
 
 function Mission() {
   const dispatch = useDispatch();
@@ -21,14 +21,14 @@ function Mission() {
           <button
             type="button"
             aria-label="Update mission"
-            onClick={() => dispatch(reserveMission())}
+            onClick={() => dispatch(joinMission())}
           >
             Reserve Mission
           </button>
           <button
             type="button"
             aria-label="Remove mission"
-            onClick={() => dispatch(cancelMissionReservation())}
+            onClick={() => dispatch(cancelMissionParticipation())}
           >
             Cancel Reservation
           </button>

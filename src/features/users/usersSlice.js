@@ -11,7 +11,7 @@ const initialState = {
       totalRocketsByUser: 0,
     },
   ],
-  status: '', 
+  status: '',
   error: '',
 };
 
