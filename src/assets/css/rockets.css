@@ -18,6 +18,7 @@
   --white-three: #e8e8e8;
   --black-one: #121212;
   --blue-one: #4386bf;
+  --green-badge: #0daf6c;
 }
 
 .rocket-card {
@@ -37,16 +38,29 @@
   justify-content: start;
 }
 
-.reserve-button {
-  background-color: var(--skyBlue);
-  color: var(--white-three);
-  border: 0 var(--white-three) solid;
-  height: 40px;
+button {
   cursor: pointer;
+  height: 40px;
   padding: 5px;
   border-radius: 5px;
 }
 
+.reserve-button {
+  background-color: var(--skyBlue);
+  color: var(--white-three);
+  border: 0 var(--white-three) solid;
+}
+
 .reserve-button:hover {
   background-color: var(--blue-one);
+}
+
+.reserved-badge {
+  background-color: var(--green-badge);
+  color: var(--white-three);
+  font-weight: bold;
+  size: .6rem;
+  margin-right: 5px;
+  padding: 3px;
+  border-radius: 5px;
 }
