@@ -8,7 +8,6 @@ import MissionsList from './features/missions/MissionsList';
 import UsersList from './features/users/UsersList';
 import User from './features/users/User';
 import NotFoundPage from './components/NotFoundPage';
-// import NotFoundPage from './components/pages/NotFoundPage';
 
 function App() {
   return (
