@@ -14,18 +14,18 @@ function User() {
 
   const content = (
     <div>
-      <h2 key={userId}>
+      <h3 key={userId}>
         {user?.name}
-      </h2>
-      <h3>
+      </h3>
+      <h4>
         Missions
         (
         {userJoinedMissions.length}
         )
-      </h3>
+      </h4>
       {userJoinedMissions.map((mission) => (
         <li key={mission.id}>
-          <Link to={`/missions/${mission.id}`}>{mission.mission_name}</Link>
+          <Link to={`/missions/${mission.mission_id}`}>{mission.mission_name}</Link>
         </li>
       ))}
     </div>
