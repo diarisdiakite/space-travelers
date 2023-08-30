@@ -7,6 +7,7 @@ import Mission from './features/missions/Mission';
 import MissionsList from './features/missions/MissionsList';
 import UsersList from './features/users/UsersList';
 import User from './features/users/User';
+import NotFoundPage from './components/NotFoundPage';
 // import NotFoundPage from './components/pages/NotFoundPage';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route index element={<UsersList />} />
           <Route path=":userId" element={<User />} />
         </Route>
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   );
