@@ -9,8 +9,7 @@ import { joinMission, cancelMissionParticipation } from '../missionsSlice';
 
 function MissionsListElements({ missions }) {
   const dispatch = useDispatch();
-  console.log(missions);
-
+  
   if (!missions) {
     return (
       <div>

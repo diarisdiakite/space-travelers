@@ -10,8 +10,7 @@ function User() {
   const user = useSelector((state) => selectUserById(state, Number(userId)));
 
   const userJoinedMissions = useSelector(selectAllJoinedMissions);
-  console.log(userJoinedMissions);
-
+  
   const content = (
     <div>
       <h3 key={userId}>

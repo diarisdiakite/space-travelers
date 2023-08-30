@@ -8,8 +8,7 @@ import MissionsListElements from './childComponents/MissionsListElements';
 
 function MissionsList() {
   const missions = useSelector(selectAllMissions);
-  console.log(missions);
-
+  
   return (
     <div className="main-container">
       <MissionsListElements
