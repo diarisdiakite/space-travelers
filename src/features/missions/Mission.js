@@ -7,7 +7,7 @@ function Mission() {
   const dispatch = useDispatch();
   const { missionId } = useParams();
   const mission = useSelector((state) => selectMissionsById(state, missionId));
-  
+
   return (
     <div className="main-container">
       <div className="mission-card">
