@@ -28,7 +28,8 @@ const rocketsSlice = createSlice({
       const id = action.payload;
       state.rockets = state.rockets.map((rocket) => {
         if (rocket.id !== id) return rocket;
-        return { ...rocket, reserved: true };
+        const value = (rocket.reserved !== undefined) ? !(rocket.reserved) : true;
+        return { ...rocket, reserved: value };
       });
     },
   },
@@ -55,4 +56,5 @@ const rocketsSlice = createSlice({
   },
 });
 
+export const { reserveAction } = rocketsSlice.actions;
 export default rocketsSlice.reducer;
