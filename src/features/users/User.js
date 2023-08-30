@@ -2,13 +2,15 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 import { selectUserById } from './usersSlice';
-import { selectMissionsByUser } from '../missions/missionsSlice';
+import { selectAllJoinedMissions } from '../missions/missionsSlice';
 
 function User() {
   const { userId } = useParams();
 
   const user = useSelector((state) => selectUserById(state, Number(userId)));
-  const userMissions = useSelector((state) => selectMissionsByUser(state, Number(userId)));
+
+  const userJoinedMissions = useSelector(selectAllJoinedMissions);
+  console.log(userJoinedMissions);
 
   const content = (
     <div>
@@ -18,12 +20,12 @@ function User() {
       <h3>
         Missions
         (
-        {userMissions.length}
+        {userJoinedMissions.length}
         )
       </h3>
-      {userMissions.map((mission) => (
+      {userJoinedMissions.map((mission) => (
         <li key={mission.id}>
-          <Link to={`/missions/${mission.id}`}>{mission.title}</Link>
+          <Link to={`/missions/${mission.id}`}>{mission.mission_name}</Link>
         </li>
       ))}
     </div>
