@@ -20,6 +20,7 @@ const RocketsList = () => {
             rocketName={rocket.name}
             description={rocket.description}
             flickrImages={rocket.flickr_images}
+            reserved={rocket.reserved}
           />
         ))}
       </ul>
