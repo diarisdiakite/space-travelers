@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima&family=Montserrat:wght@300;400;500;600&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agdasima&family=Montserrat:wght@300;400;500;600&family=Roboto+Mono&family=Roboto+Slab:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agdasima&family=Montserrat:wght@300;400;500;600&family=Roboto+Mono&family=Roboto+Slab:wght@300;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --skyBlue: #0290ff;
+  --light: #fff;
+  --greyLight: rgb(222, 222, 210);
+  --greyDark: #69686c;
+  --dark: #000;
+  --whiteIn: #e8e8e8;
+  --greyDeep: #f5f6fa;
+  --blueFade: #4386bf;
+  --white-three: #e8e8e8;
+  --black-one: #121212;
+  --blue-one: #4386bf;
+}
+
+.rocket-card {
+  display: flex;
+}
+
+.rocket-image-container > img {
+  width: 350px;
+  height: 350px;
+  padding: 15px;
+}
+
+.rocket-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+
+.reserve-button {
+  background-color: var(--skyBlue);
+  color: var(--white-three);
+  border: 0 var(--white-three) solid;
+  height: 40px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.reserve-button:hover {
+  background-color: var(--blue-one);
+}

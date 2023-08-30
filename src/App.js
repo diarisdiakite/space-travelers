@@ -7,6 +7,7 @@ import Mission from './features/missions/Mission';
 import MissionsList from './features/missions/MissionsList';
 import UsersList from './features/users/UsersList';
 import User from './features/users/User';
+import RocketsList from './features/rockets/RocketsList';
 import NotFoundPage from './components/NotFoundPage';
 
 function App() {
@@ -14,9 +15,10 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route path="/" element={<MissionsList />} />
+        <Route path="/" element={<RocketsList />} />
         {' '}
         {/* This should be the rocketsLit, we may change it */}
+        <Route path="/rockets" element={<RocketsList />} />
         <Route path="/missions">
           <Route index element={<MissionsList />} />
           <Route path=":missionId" element={<Mission />} />
