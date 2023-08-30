@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../images/planet.png';
+import logo from '../assets/images/planet.png';
 import '../assets/css/navbar.css';
 
 const NavBar = () => (
@@ -11,8 +11,8 @@ const NavBar = () => (
     </div>
     <nav className="nav-container">
       <NavLink to="/Rockets" className="nav-item">Rockets</NavLink>
-      <NavLink to="/Rockets" className="nav-item">Missions</NavLink>
-      <NavLink to="/Rockets" className="nav-item">My Profile</NavLink>
+      <NavLink to="/missions" className="nav-item">Missions</NavLink>
+      <NavLink to="/users/1" className="nav-item">My Profile</NavLink>
     </nav>
   </div>
 );
