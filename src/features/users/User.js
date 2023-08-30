@@ -24,8 +24,6 @@ function User() {
       {userMissions.map((mission) => (
         <li key={mission.id}>
           <Link to={`/missions/${mission.id}`}>{mission.title}</Link>
-          {/* {' by '}
-          {mission.author} */}
         </li>
       ))}
     </div>

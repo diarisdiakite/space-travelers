@@ -4,7 +4,10 @@ import { Provider } from 'react-redux';
 import store from './features/store';
 import './index.css';
 import App from './App';
-import { fetchMissions, setFetchedMissions } from './features/missions/missionsSlice';
+import {
+  fetchMissions, setFetchedMissions,
+} from './features/missions/missionsSlice';
+import 'bootstrap/dist/css/bootstrap.css';
 
 store.dispatch(fetchMissions());
 store.dispatch(setFetchedMissions());
