@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Table from 'react-bootstrap/Table';
+import { Button } from 'react-bootstrap';
+import Badge from 'react-bootstrap/Badge';
 import { joinMission, cancelMissionParticipation } from '../missionsSlice';
 
 function MissionsListElements({ missions }) {
@@ -33,26 +35,37 @@ function MissionsListElements({ missions }) {
             <td><Link to={`/missions/${mission.mission_id}`}>{mission.mission_name}</Link></td>
             <td>{mission.description}</td>
             <td>
-              {/* Status */}
+              {!mission.reserved && (
+              <Badge>
+                Not a participant
+              </Badge>
+              )}
+              {mission.reserved && (
+              <Badge>
+                Participant
+              </Badge>
+              )}
             </td>
             <td>
               {!mission.reserved && (
-              <button
+              <Button
                 type="button"
+                variant="outline-success"
                 aria-label="Join mission"
                 onClick={() => dispatch(joinMission(mission.mission_id))}
               >
-                Join Mission
-              </button>
+                Join
+              </Button>
               )}
               {mission.reserved && (
-              <button
+              <Button
                 type="button"
+                variant="outline-primary"
                 aria-label="cancel mission participation"
                 onClick={() => dispatch(cancelMissionParticipation(mission.mission_id))}
               >
                 Cancel
-              </button>
+              </Button>
               )}
             </td>
           </tr>
