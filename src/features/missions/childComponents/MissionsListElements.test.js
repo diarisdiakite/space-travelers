@@ -7,11 +7,19 @@ import MissionsListElements from './MissionsListElements';
 
 describe('MissionsListElements component', () => {
   it('renders correctly', () => {
+    /* const missions = [
+      {
+        mission_id: 1878900,
+        mission_name: 'My mission',
+        description: 'My mission description',
+        website: 'www.my-mission.org',
+      },
+    ]; */
     const tree = renderer
       .create(
         <Provider store={store}>
           <MemoryRouter>
-            <MissionsListElements />
+            <MissionsListElements /* missions={missions} */ />
           </MemoryRouter>
         </Provider>,
       )

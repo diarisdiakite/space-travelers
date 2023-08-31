@@ -38,3 +38,13 @@ p {
   font-weight: 400;
   font-size: large;
 }
+
+.my-profile-tables {
+  width: 100%;
+  display: flex;
+  gap: 4%;
+}
+
+.myTables {
+  width: 48%;
+}
