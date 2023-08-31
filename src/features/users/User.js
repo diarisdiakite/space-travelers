@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 import { selectUserById } from './usersSlice';
 import { selectAllJoinedMissions } from '../missions/missionsSlice';
-import { getAllBookedRockets } from '../rockets/rocketsSlice';
+import { getAllReservedRockets } from '../rockets/rocketsSlice';
 
 function User() {
   const { userId } = useParams();
@@ -11,7 +11,7 @@ function User() {
   const user = useSelector((state) => selectUserById(state, Number(userId)));
 
   const userJoinedMissions = useSelector(selectAllJoinedMissions);
-  const userBookedRockets = useSelector(getAllBookedRockets);
+  const userReservedRockets = useSelector(getAllReservedRockets);
 
   const content = (
     <div>
@@ -33,10 +33,10 @@ function User() {
         <h4>
           My Rockets
           (
-          {userBookedRockets.length}
+          {userReservedRockets.length}
           )
         </h4>
-        {userBookedRockets.map((rocket) => (
+        {userReservedRockets.map((rocket) => (
           <li key={rocket.id}>{rocket.name}</li>
         ))}
       </div>

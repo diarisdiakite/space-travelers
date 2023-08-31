@@ -58,7 +58,7 @@ const rocketsSlice = createSlice({
 });
 
 export const getAllRockets = (state) => state.rockets;
-export const getAllBookedRockets = (state) => state.rockets.rockets.filter(
+export const getAllReservedRockets = (state) => state.rockets.rockets.filter(
   (rocket) => rocket.reserved === true,
 );
 export const { reserveAction } = rocketsSlice.actions;
