@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MissionsList component renders correctly 1`] = `
+<div
+  className="main-container"
+>
+  <table
+    className="table table-striped table-bordered table-hover"
+  >
+    <thead>
+      <tr>
+        <th>
+          Mission
+        </th>
+        <th>
+          Description
+        </th>
+        <th>
+          Status
+        </th>
+        <th>
+          Action
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</div>
+`;

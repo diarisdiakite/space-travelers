@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User component renders correctly 1`] = `
+<div
+  className="main-container"
+>
+  <div>
+    <h3 />
+    <h4>
+      Missions (
+      0
+      )
+    </h4>
+  </div>
+</div>
+`;
