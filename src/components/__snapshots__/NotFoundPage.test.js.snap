@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFoundPage component renders correctly 1`] = `
+<div
+  className="main-container"
+>
+  <h2>
+    This Page is not found
+  </h2>
+  <p>
+    Please contact us at
+    <strong>
+       diarisdiakite@gmail.com 
+    </strong>
+    and
+    <strong>
+       brunokambere@gmail.com
+    </strong>
+  </p>
+</div>
+`;
