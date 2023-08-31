@@ -18,7 +18,7 @@ describe('Rockets component', () => {
               description="a"
               flickrImages={imageError}
               reserved={false}
-             />
+            />
           </MemoryRouter>
         </Provider>,
       )
