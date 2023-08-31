@@ -20,11 +20,11 @@ exports[`Rockets component renders correctly 1`] = `
       className="rocket-content-container"
     >
       <h2>
-        a
+        Falcon 1
       </h2>
       <p>
         <span>
-          a
+          The Falcon 1 was an expendable launch system privately
         </span>
       </p>
       <button
