@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UsersList component renders correctly 1`] = `
+<div
+  className="main-container"
+>
+  <div>
+    <h2>
+      <a
+        href="/users/1"
+        onClick={[Function]}
+      >
+        My profile
+         
+        (
+        0
+        )
+      </a>
+    </h2>
+    <p>
+      User's description
+       
+    </p>
+  </div>
+</div>
+`;

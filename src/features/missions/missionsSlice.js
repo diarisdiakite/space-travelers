@@ -1,7 +1,8 @@
 import { createSlice, createSelector, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+// import axios from 'axios';
+import fetchMissionsAPI from './fetchMissionsAPI';
 
-const FEATURE_URL = 'https://api.spacexdata.com/v3/missions';
+// const FEATURE_URL = 'https://api.spacexdata.com/v3/missions';
 
 const initialState = {
   loading: false,
@@ -9,22 +10,7 @@ const initialState = {
   error: '',
 };
 
-export const fetchMissions = createAsyncThunk('missions/fetchMissions', async () => {
-  try {
-    const response = await axios.get(FEATURE_URL);
-
-    if (response.status !== 200) {
-      throw new Error('Failed to fetch missions');
-    }
-
-    return response.data.map((mission) => ({
-      ...mission,
-      reserved: false,
-    }));
-  } catch (error) {
-    throw new Error(`Failed to fetch the data, ${error}`);
-  }
-});
+export const fetchMissions = createAsyncThunk('missions/fetchMissions', async () => fetchMissionsAPI());
 
 const missionsSlice = createSlice({
   name: 'missions',
