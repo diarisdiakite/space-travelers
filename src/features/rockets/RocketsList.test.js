@@ -6,16 +6,16 @@ import store from '../store';
 import RocketsList from './RocketsList';
 
 describe('RocketsList component', () => {
-    it('renders correctly', () => {
-        const tree = renderer
-            .create(
-                <Provider store={store}>
-                    <MemoryRouter>
-                        <RocketsList />
-                    </MemoryRouter>
-                </Provider>,
-            )
-            .toJSON();
-        expect(tree).toMatchSnapshot();
-    });
+  it('renders correctly', () => {
+    const tree = renderer
+      .create(
+        <Provider store={store}>
+          <MemoryRouter>
+            <RocketsList />
+          </MemoryRouter>
+        </Provider>,
+      )
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
