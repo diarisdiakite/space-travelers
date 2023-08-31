@@ -38,16 +38,20 @@
   justify-content: start;
 }
 
+.rocket-content-container > p > span {
+  margin-left: 5px;
+}
+
 button {
-  cursor: pointer;
+  color: var(--white-three);
   height: 40px;
+  cursor: pointer;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 5px !important;
 }
 
 .reserve-button {
   background-color: var(--skyBlue);
-  color: var(--white-three);
   border: 0 var(--white-three) solid;
 }
 
@@ -55,12 +59,6 @@ button {
   background-color: var(--blue-one);
 }
 
-.reserved-badge {
-  background-color: var(--green-badge);
-  color: var(--white-three);
-  font-weight: bold;
-  size: .6rem;
-  margin-right: 5px;
-  padding: 3px;
-  border-radius: 5px;
+.cancel-button {
+  color: var(--black-one);
 }
