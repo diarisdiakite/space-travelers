@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Mission component renders correctly 1`] = `
+<div
+  className="main-container"
+>
+  <div
+    className="mission-card"
+  >
+    <div
+      className="mission"
+    >
+      <h3 />
+      <p />
+      <p>
+        <a
+          href="/"
+          onClick={[Function]}
+        />
+      </p>
+      <button
+        aria-label="Update mission"
+        onClick={[Function]}
+        type="button"
+      >
+        Reserve Mission
+      </button>
+      <button
+        aria-label="Remove mission"
+        onClick={[Function]}
+        type="button"
+      >
+        Cancel Reservation
+      </button>
+    </div>
+  </div>
+</div>
+`;
