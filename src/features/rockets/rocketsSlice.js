@@ -28,7 +28,8 @@ const rocketsSlice = createSlice({
       const id = action.payload;
       state.rockets = state.rockets.map((rocket) => {
         if (rocket.id !== id) return rocket;
-        return { ...rocket, reserved: true };
+        const value = (rocket.reserved !== undefined) ? !(rocket.reserved) : true;
+        return { ...rocket, reserved: value };
       });
     },
   },
@@ -45,14 +46,20 @@ const rocketsSlice = createSlice({
           type: item.type,
           flickr_images: item.flickr_images[0],
           description: item.description,
+          reserved: false,
         }));
         state.rockets = data;
       })
       .addCase(fetchRockets.rejected, (state, action) => {
-        state.rockets = false;
+        state.rockets = [];
         state.error = action.payload;
       });
   },
 });
 
+export const getAllRockets = (state) => state.rockets;
+export const getAllReservedRockets = (state) => state.rockets.rockets.filter(
+  (rocket) => rocket.reserved === true,
+);
+export const { reserveAction } = rocketsSlice.actions;
 export default rocketsSlice.reducer;

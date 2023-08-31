@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 import { selectUserById } from './usersSlice';
 import { selectAllJoinedMissions } from '../missions/missionsSlice';
+import { getAllReservedRockets } from '../rockets/rocketsSlice';
 
 function User() {
   const { userId } = useParams();
@@ -10,6 +11,7 @@ function User() {
   const user = useSelector((state) => selectUserById(state, Number(userId)));
 
   const userJoinedMissions = useSelector(selectAllJoinedMissions);
+  const userReservedRockets = useSelector(getAllReservedRockets);
 
   const content = (
     <div>
@@ -27,6 +29,17 @@ function User() {
           <Link to={`/missions/${mission.mission_id}`}>{mission.mission_name}</Link>
         </li>
       ))}
+      <div>
+        <h4>
+          My Rockets
+          (
+          {userReservedRockets.length}
+          )
+        </h4>
+        {userReservedRockets.map((rocket) => (
+          <li key={rocket.id}>{rocket.name}</li>
+        ))}
+      </div>
     </div>
   );
 
