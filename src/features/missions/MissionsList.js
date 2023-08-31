@@ -2,7 +2,6 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import {
   selectAllMissions,
-  // joinMission, cancelMissionParticipation,
 } from './missionsSlice';
 import MissionsListElements from './childComponents/MissionsListElements';
 

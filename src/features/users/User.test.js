@@ -6,18 +6,11 @@ import User from './User';
 
 describe('User component', () => {
   it('renders correctly', () => {
-    /* const userReservations = {
-      id: 1,
-      name: 'My profile',
-      description: 'User\'s description',
-      missionsByUser: ['mission1', 'mission2'],
-      rocketsByUser: ['rocket1', 'rocket2'],
-    } */
     const tree = renderer
       .create(
         <Provider store={store}>
           <MemoryRouter>
-            <User /* userReservations={userReservations} */ />
+            <User />
           </MemoryRouter>
         </Provider>,
       )

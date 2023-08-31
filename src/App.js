@@ -1,7 +1,6 @@
 import {
   BrowserRouter, Routes, Route,
 } from 'react-router-dom';
-// import './assets/css/missions.css';
 import NavBar from './components/NavBar';
 import Mission from './features/missions/Mission';
 import MissionsList from './features/missions/MissionsList';
@@ -17,7 +16,6 @@ function App() {
       <Routes>
         <Route path="/" element={<RocketsList />} />
         {' '}
-        {/* This should be the rocketsLit, we may change it */}
         <Route path="/rockets" element={<RocketsList />} />
         <Route path="/missions">
           <Route index element={<MissionsList />} />

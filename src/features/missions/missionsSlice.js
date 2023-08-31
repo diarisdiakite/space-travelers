@@ -1,8 +1,5 @@
 import { createSlice, createSelector, createAsyncThunk } from '@reduxjs/toolkit';
-// import axios from 'axios';
 import fetchMissionsAPI from './fetchMissionsAPI';
-
-// const FEATURE_URL = 'https://api.spacexdata.com/v3/missions';
 
 const initialState = {
   loading: false,
@@ -17,15 +14,14 @@ const missionsSlice = createSlice({
   initialState,
 
   reducers: {
-    setFetchedMissions: (state, action) => {
-      state.missions = action.payload;
-      /* const selectedMissions = state.missions.map((mission) => ({
+    setFetchedMissions: (state) => {
+      const selectedMissions = state.missions.map((mission) => ({
         id: mission.mission_id,
         name: mission.mission_name,
         desription: mission.description,
         reserved: false,
-      })) */
-      // state.missions = selectedMissions;
+      }));
+      state.missions = selectedMissions;
       state.loading = false;
       state.error = '';
     },
