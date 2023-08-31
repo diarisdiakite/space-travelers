@@ -9,7 +9,8 @@
 .logo {
   width: 30px;
   height: 30px;
-  align-self: center;
+
+  /* align-self: center; */
 }
 
 img {
@@ -38,7 +39,7 @@ img {
   list-style-type: none;
   width: 20%;
   height: 50%;
-  margin: 5% 0 0 5%;
+  margin: 1% 0 0 5%;
   align-self: center;
   border-right: 1px solid black;
   align-items: baseline;

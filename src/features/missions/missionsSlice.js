@@ -16,7 +16,11 @@ export const fetchMissions = createAsyncThunk('missions/fetchMissions', async ()
     if (response.status !== 200) {
       throw new Error('Failed to fetch missions');
     }
-    return response.data;
+
+    return response.data.map((mission) => ({
+      ...mission,
+      reserved: false,
+    }));
   } catch (error) {
     throw new Error(`Failed to fetch the data, ${error}`);
   }
@@ -29,6 +33,13 @@ const missionsSlice = createSlice({
   reducers: {
     setFetchedMissions: (state, action) => {
       state.missions = action.payload;
+      /* const selectedMissions = state.missions.map((mission) => ({
+        id: mission.mission_id,
+        name: mission.mission_name,
+        desription: mission.description,
+        reserved: false,
+      })) */
+      // state.missions = selectedMissions;
       state.loading = false;
       state.error = '';
     },
@@ -65,6 +76,10 @@ const missionsSlice = createSlice({
 });
 
 export const selectAllMissions = (state) => state.missions.missions;
+
+export const selectAllJoinedMissions = (state) => state.missions.missions.filter(
+  (mission) => mission.reserved === true,
+);
 
 export const selectMissionsById = (state, missionId) => state.missions.missions.find(
   (mission) => mission.mission_id === missionId,

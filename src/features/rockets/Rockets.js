@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { reserveAction } from '../../redux/rockets/rocketsSlice';
 import '../../assets/css/rockets.css';
+import imageError from '../../assets/images/image_not_available.png';
 
 const Rockets = ({
   id, rocketName, description, flickrImages, reserved = false,
@@ -13,7 +14,7 @@ const Rockets = ({
     <div className="main-container">
       <div className="rocket-card">
         <div className="rocket-image-container">
-          <img src={flickrImages} alt="rocket" />
+          <img onError={(e) => { e.target.src = imageError; }}  src={flickrImages} alt="rocket" />
         </div>
         <div className="rocket-content-container">
           <h2 key={id}>{rocketName}</h2>
