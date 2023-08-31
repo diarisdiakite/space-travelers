@@ -46,15 +46,20 @@ const rocketsSlice = createSlice({
           type: item.type,
           flickr_images: item.flickr_images[0],
           description: item.description,
+          reserved: false,
         }));
         state.rockets = data;
       })
       .addCase(fetchRockets.rejected, (state, action) => {
-        state.rockets = false;
+        state.rockets = [];
         state.error = action.payload;
       });
   },
 });
 
+export const getAllRockets = (state) => state.rockets;
+export const getAllBookedRockets = (state) => state.rockets.rockets.filter(
+  (rocket) => rocket.reserved === true,
+);
 export const { reserveAction } = rocketsSlice.actions;
 export default rocketsSlice.reducer;
