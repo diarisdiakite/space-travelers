@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
+import { Table } from 'react-bootstrap';
 import { selectUserById } from './usersSlice';
 import { selectAllJoinedMissions } from '../missions/missionsSlice';
 import { getAllReservedRockets } from '../rockets/rocketsSlice';
@@ -15,30 +16,51 @@ function User() {
 
   const content = (
     <div>
-      <h3 key={userId}>
-        {user?.name}
-      </h3>
-      <h4>
-        Missions
-        (
-        {userJoinedMissions.length}
-        )
-      </h4>
-      {userJoinedMissions.map((mission) => (
-        <li key={mission.id}>
-          <Link to={`/missions/${mission.mission_id}`}>{mission.mission_name}</Link>
-        </li>
-      ))}
-      <div>
-        <h4>
-          My Rockets
-          (
-          {userReservedRockets.length}
-          )
-        </h4>
-        {userReservedRockets.map((rocket) => (
-          <li key={rocket.id}>{rocket.name}</li>
-        ))}
+      <div className="myTable">
+        <h3 key={userId}>
+          {user?.name}
+        </h3>
+      </div>
+      <div className="my-profile-tables">
+        <div className="myTables">
+          <Table striped bordered hover>
+            <thead>
+              <th>
+                Missions
+                (
+                {userJoinedMissions.length}
+                )
+              </th>
+            </thead>
+            <tbody>
+              {userJoinedMissions.map((mission) => (
+                <tr key={mission.id}>
+                  <td><Link to={`/missions/${mission.mission_id}`}>{mission.mission_name}</Link></td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        </div>
+
+        <div className="myTables">
+          <Table striped bordered hover>
+            <thead>
+              <th>
+                My Rockets
+                (
+                {userReservedRockets.length}
+                )
+              </th>
+            </thead>
+            <tbody>
+              {userReservedRockets.map((rocket) => (
+                <tr key={rocket.id}>
+                  <td>{rocket.name}</td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        </div>
       </div>
     </div>
   );

@@ -16,7 +16,6 @@ function UsersList() {
           {user.name}
           {' '}
           (
-          {/* calculate user length */}
           {userMissions.length}
           )
         </Link>

@@ -5,12 +5,47 @@ exports[`User component renders correctly 1`] = `
   className="main-container"
 >
   <div>
-    <h3 />
-    <h4>
-      Missions (
-      0
-      )
-    </h4>
+    <div
+      className="myTable"
+    >
+      <h3 />
+    </div>
+    <div
+      className="my-profile-tables"
+    >
+      <div
+        className="myTables"
+      >
+        <table
+          className="table table-striped table-bordered table-hover"
+        >
+          <thead>
+            <th>
+              Missions (
+              0
+              )
+            </th>
+          </thead>
+          <tbody />
+        </table>
+      </div>
+      <div
+        className="myTables"
+      >
+        <table
+          className="table table-striped table-bordered table-hover"
+        >
+          <thead>
+            <th>
+              My Rockets (
+              0
+              )
+            </th>
+          </thead>
+          <tbody />
+        </table>
+      </div>
+    </div>
   </div>
 </div>
 `;
