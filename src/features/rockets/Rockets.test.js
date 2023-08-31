@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router';
 import store from '../store';
 import Rockets from './Rockets';
+import imageError from '../../assets/images/image_not_available.png';
 
 describe('Rockets component', () => {
   it('renders correctly', () => {
@@ -11,7 +12,13 @@ describe('Rockets component', () => {
       .create(
         <Provider store={store}>
           <MemoryRouter>
-            <Rockets />
+            <Rockets
+              id="1"
+              rocketName="a"
+              description="a"
+              flickrImages={imageError}
+              reserved={false}
+             />
           </MemoryRouter>
         </Provider>,
       )

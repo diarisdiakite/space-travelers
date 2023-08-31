@@ -13,14 +13,19 @@ exports[`Rockets component renders correctly 1`] = `
       <img
         alt="rocket"
         onError={[Function]}
+        src="image_not_available.png"
       />
     </div>
     <div
       className="rocket-content-container"
     >
-      <h2 />
+      <h2>
+        a
+      </h2>
       <p>
-        <span />
+        <span>
+          a
+        </span>
       </p>
       <button
         className="reserve-button"
