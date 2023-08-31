@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rockets component renders correctly 1`] = `
+<div
+  className="main-container"
+>
+  <div
+    className="rocket-card"
+  >
+    <div
+      className="rocket-image-container"
+    >
+      <img
+        alt="rocket"
+        onError={[Function]}
+        src="image_not_available.png"
+      />
+    </div>
+    <div
+      className="rocket-content-container"
+    >
+      <h2>
+        Falcon 1
+      </h2>
+      <p>
+        <span>
+          The Falcon 1 was an expendable launch system privately
+        </span>
+      </p>
+      <button
+        className="reserve-button"
+        onClick={[Function]}
+        type="button"
+      >
+        Reserve Rocket
+      </button>
+    </div>
+  </div>
+</div>
+`;
