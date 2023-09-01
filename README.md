@@ -140,8 +140,8 @@ GitHub: [@diarisd](https://github.com/diarisdiakite)
 👤 Bruno
 
 GitHub: [@kambereBr](https://github.com/kambereBr)
-<br> Twitter: [@bruno]()
-<br> LinkedIn: [@brunoe]()
+<br> Twitter: [@kambereBr](https://twitter.com/kambereBr)
+<br> LinkedIn: [bruno kambere](https://www.linkedin.com/in/bruno-kambere-399447138/)
 <br><br>
 
 [`Back to top`](#readme-top)
@@ -160,7 +160,7 @@ Please check the issues page.
 [`Back to top`](#readme-top)
 
 ## ⭐️ <a name="show-your-support">Show your support</a>
-If you like the [Space-travelers]() you can support our work. Visit othe links [Didy personal page](https://diarisdiakite.github.io/my-portfolio/) and [Bruno personal page](https://kamberebr.github.io/Portfolio/).
+If you like the [Space-travelers]() you can support our work. Visit other links [Didy personal page](https://diarisdiakite.github.io/my-portfolio/) and [Bruno personal page](https://kamberebr.github.io/Portfolio/).
 
 
 [`Back to top`](#readme-top)
