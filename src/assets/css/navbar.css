@@ -49,7 +49,6 @@ img {
 
 .active {
   color: blue;
-  font-style: bold;
   text-decoration: underline;
 }
 
