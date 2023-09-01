@@ -35,7 +35,7 @@ function User() {
             <tbody>
               {userJoinedMissions.map((mission) => (
                 <tr key={mission.id}>
-                  <td><Link to={`/missions/${mission.mission_id}`}>{mission.mission_name}</Link></td>
+                  <td><Link to={`/missions/${mission.mission_id}`} className="no-style">{mission.mission_name}</Link></td>
                 </tr>
               ))}
             </tbody>

@@ -48,5 +48,21 @@ img {
 }
 
 .active {
-  color: red;
+  color: blue;
+  font-style: bold;
+  text-decoration: underline;
+}
+
+.no-style {
+  color: black;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.bolded {
+  font-weight: bold;
+}
+
+.fixed-width {
+  width: 12%;
 }
