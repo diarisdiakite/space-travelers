@@ -31,39 +31,39 @@ function MissionsListElements({ missions }) {
       <tbody>
         {missions.map((mission) => (
           <tr key={mission.mission_id}>
-            <td><Link to={`/missions/${mission.mission_id}`}>{mission.mission_name}</Link></td>
+            <td><Link to={`/missions/${mission.mission_id}`} className="no-style bolded">{mission.mission_name}</Link></td>
             <td>{mission.description}</td>
-            <td>
+            <td className="fixed-width">
               {!mission.reserved && (
-              <Badge>
-                Not a participant
+              <Badge bg="secondary">
+                NOT A MEMBER
               </Badge>
               )}
               {mission.reserved && (
-              <Badge>
-                Participant
+              <Badge bg="success">
+                Active Member
               </Badge>
               )}
             </td>
-            <td>
+            <td className="fixed-width">
               {!mission.reserved && (
               <Button
                 type="button"
-                variant="outline-success"
+                variant="outline-secondary"
                 aria-label="Join mission"
                 onClick={() => dispatch(joinMission(mission.mission_id))}
               >
-                Join
+                Join Mission
               </Button>
               )}
               {mission.reserved && (
               <Button
                 type="button"
-                variant="outline-primary"
+                variant="outline-danger"
                 aria-label="cancel mission participation"
                 onClick={() => dispatch(cancelMissionParticipation(mission.mission_id))}
               >
-                Cancel
+                Leave Mission
               </Button>
               )}
             </td>
